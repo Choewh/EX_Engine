@@ -150,6 +150,41 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
+
+
+            HBRUSH bluebrush = CreateSolidBrush(RGB(0, 0, 255));
+            HBRUSH oldbrush = (HBRUSH)SelectObject(hdc, bluebrush);
+
+            int i = 100;
+            int j = 200;
+            
+            Ellipse(hdc, i, i, j, j);
+
+            (HBRUSH)SelectObject(hdc, oldbrush); //브러쉬 선택
+            DeleteObject(bluebrush);             //브러쉬 삭제
+
+            HPEN redPen = CreatePen(PS_SOLID, 5, (RGB(255, 0, 0)));
+
+            HPEN oldPen = (HPEN)SelectObject(hdc, redPen);
+
+            Ellipse(hdc, 300, 300, 400, 400);   
+            (HPEN)SelectObject(hdc, oldPen);     //브러쉬 선택 
+            DeleteObject(redPen);                //브러쉬 삭제 
+
+            //기본으로 자주사용 되는 GDI오브젝트를 미리 DC안에 만들어두었는데
+            // 그 오브젝트들을 스톡 오브젝트라고 한다.
+
+            //HBRUSH oldbrush = (HBRUSH)SelectObject(hdc, brush);
+
+            //Ellipse(hdc, 500, 500, 600, 600);
+
+            // DC란 화면에 출력에 필요한 모든 정보를 가지는 데이터 구조체이며
+            // GDI모듈에 의해서 관리된다
+            // 어떤 폰트를 사용할건가?, 어떤 선의 굵기를 정해줄건가 어떤 색상으로 그려줄껀가
+            // 화면 출력에 필요한 모든 경우는 WINAPI에서는 DC를 통해서 작업을 진행할 수 있다.
+            // 
+            // 
+            // 
             // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
             EndPaint(hWnd, &ps);
         }
