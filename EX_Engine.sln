@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Editor_Window", "Editor_Win
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EX_Engine_Window", "EX_Engine_Window\EX_Engine_Window.vcxproj", "{6E2C6FA3-1DDD-435A-A8CC-3CC3231DCAEA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EX_Engine_SOURCE", "EX_Engine_SOURCE\EX_Engine_SOURCE.vcxitems", "{9F2334DE-FD13-4BF3-8493-EEDA2018E8E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -37,5 +39,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {89005619-66FE-460B-A179-34337F50099E}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		EX_Engine_SOURCE\EX_Engine_SOURCE.vcxitems*{6e2c6fa3-1ddd-435a-a8cc-3cc3231dcaea}*SharedItemsImports = 4
+		EX_Engine_SOURCE\EX_Engine_SOURCE.vcxitems*{9f2334de-fd13-4bf3-8493-eeda2018e8e3}*SharedItemsImports = 9
 	EndGlobalSection
 EndGlobal

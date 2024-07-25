@@ -3,7 +3,10 @@
 
 #include "framework.h"
 #include "Editor_Window.h"
-#include "CommonInclude.h"
+
+#include "..\\EX_Engine_SOURCE\\EApplication.h"
+
+Application app;
 
 #define MAX_LOADSTRING 100
 
@@ -27,10 +30,14 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, // 프로그램의 인스턴스 
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
 
+    //깃허브 테스트
 
+    app.test();
     
     // TODO: 여기에 코드를 입력합니다.
+    ///
 
+    ///
     // 전역 문자열을 초기화합니다.
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
     LoadStringW(hInstance, IDC_EDITORWINDOW, szWindowClass, MAX_LOADSTRING);
