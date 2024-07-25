@@ -14,9 +14,18 @@
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)EBoard.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)EBoardMaker.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)EGameObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)EInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)EApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)EBoard.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)EBoardMaker.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)EGameObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)EInput.cpp" />
   </ItemGroup>
 </Project>

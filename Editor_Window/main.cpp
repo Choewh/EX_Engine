@@ -1,12 +1,19 @@
 ﻿// Editor_Window.cpp : 애플리케이션에 대한 진입점을 정의합니다.
 //
 
+#define BoradPos 100 , 100
+#define BoradPosX 100
+#define BoradPosY 100
+#define BoradW 150
+#define BoradH 450
+#define BlockG 15
+
 #include "framework.h"
 #include "Editor_Window.h"
 
 #include "..\\EX_Engine_SOURCE\\EApplication.h"
 
-Application app;
+EX::Application application;
 
 #define MAX_LOADSTRING 100
 
@@ -31,8 +38,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, // 프로그램의 인스턴스 
     UNREFERENCED_PARAMETER(lpCmdLine);
 
     //깃허브 테스트
-
-    app.test();
     
     // TODO: 여기에 코드를 입력합니다.
     ///
@@ -75,7 +80,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, // 프로그램의 인스턴스 
         }
         else
         {
-            int a = 0;
+            application.Run();
             // 메세지가 없을 경우 여기서 처리
             // 게임 로직이 들어가면 된다.
         }
@@ -139,6 +144,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
        CW_USEDEFAULT, 0, 1600,900 , 0, nullptr, nullptr, hInstance, nullptr);
 
+   application.Initialize(hWnd);
+
    if (!hWnd)
    {
       return FALSE;
@@ -197,28 +204,27 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             HDC hdc = BeginPaint(hWnd, &ps);
 
-            HBRUSH bluebrush = CreateSolidBrush(RGB(0, 0, 255));        //핸들선언과 동시에 초기화
-            HBRUSH oldbrush = (HBRUSH)SelectObject(hdc, bluebrush);     //이전핸들 저장
-            Ellipse(hdc, 100,100,200,200);                              //브러쉬 사용
-            (HBRUSH)SelectObject(hdc, oldbrush);                        //이전브러쉬 되돌려놓기
-            DeleteObject(bluebrush);                                    //사용했던 브러쉬 삭제
+            
+            
 
-            HPEN redPen = CreatePen(PS_SOLID, 5, (RGB(255, 0, 0)));     //핸들선언과 동시에 초기화 
-            HPEN oldPen = (HPEN)SelectObject(hdc, redPen);              //이전핸들 저장
-            Ellipse(hdc, 300, 300, 400, 400);                           //펜 사용
-            (HPEN)SelectObject(hdc, oldPen);                            //이전브러쉬 되돌려놓기
-            DeleteObject(redPen);                                       //사용했던 브러쉬 삭제
+            //HPEN redPen = CreatePen(PS_SOLID, 5, (RGB(255, 0, 0)));     //핸들선언과 동시에 초기화 
+            //HPEN oldPen = (HPEN)SelectObject(mHdc, redPen);              //이전핸들 저장
+            //Ellipse(mHdc, 300, 300, 400, 400);                           //펜 사용
+            //(HPEN)SelectObject(mHdc, oldPen);                            //이전브러쉬 되돌려놓기
+            //DeleteObject(redPen);                                       //사용했던 브러쉬 삭제
 
-            // 스톡 오브젝트 (HBRUSH)GetStockObject( int Color );
-                                   /*""""""""""""""*/
-            //기본으로 자주사용 되는 GDI오브젝트를 미리 DC안에 만들어두었는데
-            // 그 오브젝트들을 스톡 오브젝트라고 한다.
-            HBRUSH graybrush = (HBRUSH)GetStockObject(GRAY_BRUSH);      //스톡오브젝트로 선언과 동시에 초기화
-                                     /*""""""""""""""*/
-            oldbrush = (HBRUSH)SelectObject(hdc, graybrush);            //이전핸들 저장
-            Rectangle(hdc, 100, 100, 300, 500);                         //브러쉬 사용
-            (HBRUSH)SelectObject(hdc, oldbrush);                        //이전브러쉬 되돌려놓기
-            DeleteObject(graybrush);                                    //사용했던 브러쉬 삭제
+            //// 스톡 오브젝트 (HBRUSH)GetStockObject( int Color );
+            //					   /*""""""""""""""*/
+            
+            ////기본으로 자주사용 되는 GDI오브젝트를 미리 DC안에 만들어두었는데
+            //// 그 오브젝트들을 스톡 오브젝트라고 한다.
+            //HBRUSH graybrush = (HBRUSH)GetStockObject(GRAY_BRUSH);      //스톡오브젝트로 선언과 동시에 초기화
+            //                         /*""""""""""""""*/
+            //oldbrush = (HBRUSH)SelectObject(mHdc, graybrush);            //이전핸들 저장
+            //Rectangle(mHdc, 100, 100, 300, 500);                         //브러쉬 사용
+            //(HBRUSH)SelectObject(mHdc, oldbrush);                        //이전브러쉬 되돌려놓기
+            //DeleteObject(graybrush);                                    //사용했던 브러쉬 삭제
+            //Rectangle(mHdc, 500, 500, 600, 600);
             
             
             // 도형 ( 핸들 , 왼쪽 , 위 , 오른쪽 , 아래 )
