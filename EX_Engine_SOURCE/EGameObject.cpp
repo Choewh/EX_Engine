@@ -1,5 +1,6 @@
 #include "EGameObject.h"
-
+#include "EInput.h"
+#include "ETime.h"
 namespace EX 
 {
 	GameObject::GameObject()
@@ -15,21 +16,22 @@ namespace EX
 
 	void GameObject::Update() 
 	{
-		if ((GetAsyncKeyState(VK_RIGHT) & 0x8000))
+		const float speed = 100.0f;
+		if (Input::GetKey(eKeyCode::Right))
 		{
-			mX += 0.01f;
+			mX += speed * Time::DeltaTime();
 		}
-		if ((GetAsyncKeyState(VK_LEFT) & 0x8000))
+		if (Input::GetKey(eKeyCode::Left))
 		{
-			mX -= 0.01f;
+			mX -= speed * Time::DeltaTime();
 		}
-		if ((GetAsyncKeyState(VK_UP) & 0x8000))
+		if (Input::GetKey(eKeyCode::Up))
 		{
-			mY -= 0.01f;
+			mY -= speed * Time::DeltaTime();
 		}
-		if ((GetAsyncKeyState(VK_DOWN) & 0x8000))
+		if (Input::GetKey(eKeyCode::Down))
 		{
-			mY += 0.01f;
+			mY += speed * Time::DeltaTime();
 		}
 	}
 

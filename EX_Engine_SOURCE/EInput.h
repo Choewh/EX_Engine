@@ -13,6 +13,8 @@ namespace EX {
 	enum class eKeyCode : unsigned char
 	{
 		Z,X,C,
+		  W,		  Up,
+		A,S,D,	Left,Down,Right,
 		Space,
 		End, //끝
 	};
@@ -28,16 +30,20 @@ namespace EX {
 		
 		static void Initailize();
 
-		static void Update();
+		static void UpdateKeys();
 
 
-		static bool GetKeyDown(eKeyCode code);
-		static bool GetKeyUp(eKeyCode code);
-		static bool GetKey(eKeyCode code);
+		static bool GetKeyDown(eKeyCode code) { return mKeys[(UINT)code].state == eKeyState::Down; }
+		static bool GetKeyUp(eKeyCode code) { return mKeys[(UINT)code].state == eKeyState::Up; }		
+		static bool GetKey(eKeyCode code) { return mKeys[(UINT)code].state == eKeyState::Pressed; }
 
 	private:
-		//eKeyState mState = eKeyState::Up;
 		static std::vector<Key> mKeys;
+		static void creatKeys();
+		static void updateKey(Input::Key& key);
+		static bool isKeyDown(eKeyCode code);
+		static void updateKeydown(Input::Key& key);
+		static void updateKeyup(Input::Key& key);
 	};
 
 }

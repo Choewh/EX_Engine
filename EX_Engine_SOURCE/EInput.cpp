@@ -6,16 +6,17 @@ namespace EX
 	int ASCII[(UINT)eKeyCode::End] =
 	{
 		'Z','X','C',
+			'W',			   VK_UP,
+		'A','S','D',  VK_LEFT,VK_DOWN,VK_RIGHT,
 		' ',
 	};
 
 	void Input::Initailize()
 	{
-		//typedef int DOGUEINT;
-		//DOGUEINT a = 0;
-
-		//mKeys.resize((UINT)eKeyCode::End);
-
+		creatKeys();
+	}
+	void Input::creatKeys()
+	{
 		for (size_t i = 0; i < (UINT)eKeyCode::End; i++)
 		{
 			Key key = {};
@@ -26,31 +27,47 @@ namespace EX
 			mKeys.push_back(key);
 		}
 	}
-
-	void Input::Update()
+    /********************************/
+	void Input::UpdateKeys()
 	{
-		for (size_t i = 0; i < mKeys.size(); i++)
+		for (auto& key : mKeys)
 		{
-			// 키가 눌렸다
-			if (GetAsyncKeyState(ASCII[i]) & 0x8000)
-			{
-				if (mKeys[i].bPressed == true)
-					mKeys[i].state = eKeyState::Pressed;
-				else
-					mKeys[i].state = eKeyState::Down;
-
-				mKeys[i].bPressed == true;
-			}
-			else // 키가 안눌렸다
-			{
-				if (mKeys[i].bPressed == true)
-					mKeys[i].state = eKeyState::Up;
-				else
-					mKeys[i].state = eKeyState::None;
-
-				mKeys[i].bPressed == false;
-			}
+			updateKey(key);
 		}
+	}
+	void Input::updateKey(Input::Key& key)
+	{
+		if (isKeyDown(key.KeyCode))
+		{
+			updateKeydown(key);
+		}
+		else
+		{
+			updateKeyup(key);
+		}
+	}
+	/********************************/
+	bool Input::isKeyDown(eKeyCode code)
+	{
+		return GetAsyncKeyState(ASCII[(UINT)code]) & 0x8000;
+	}
+	void Input::updateKeydown(Input::Key& key)
+	{
+		if (mKeys[(UINT)key.KeyCode].bPressed == true)
+			mKeys[(UINT)key.KeyCode].state = eKeyState::Pressed;
+		else
+			mKeys[(UINT)key.KeyCode].state = eKeyState::Down;
+
+		mKeys[(UINT)key.KeyCode].bPressed = true;
+	}
+	void Input::updateKeyup(Input::Key& key)
+	{
+			if (mKeys[(UINT)key.KeyCode].bPressed == true)
+				mKeys[(UINT)key.KeyCode].state = eKeyState::Up;
+			else
+				mKeys[(UINT)key.KeyCode].state = eKeyState::None;
+
+			mKeys[(UINT)key.KeyCode].bPressed = false;
 	}
 
 }

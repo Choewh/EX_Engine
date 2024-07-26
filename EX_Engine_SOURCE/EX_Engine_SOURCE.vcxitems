@@ -20,6 +20,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)EBoardMaker.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ETime.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)EApplication.cpp" />
@@ -27,5 +28,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)EBoardMaker.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ETime.cpp" />
   </ItemGroup>
 </Project>

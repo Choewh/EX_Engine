@@ -10,7 +10,7 @@ namespace EX
 		Application();	//생성자
 		~Application();	//소멸자
 
-		void Initialize(HWND Hwnd);
+		void Initialize(HWND Hwnd, UINT width, UINT height);
 		void Run();
 
 		void Update();
@@ -22,7 +22,11 @@ namespace EX
 		HWND mHwnd;
 		HDC mHdc;
 
-		float mSpeed;
+		HDC mBackHdc;
+		HBITMAP mBackBuffer; //도화지 , 바탕 ,
+
+		UINT mWidth;
+		UINT mHeight;
 		GameObject mPlayer;
 	};
 }
