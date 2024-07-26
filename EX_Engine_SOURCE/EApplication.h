@@ -19,6 +19,9 @@ namespace EX
 
 
 	private:
+		void adjustWindowRect(HWND Hwnd, UINT width, UINT height);
+		void creatBuffer(UINT width, UINT height);
+		void InitailizeEtc();
 		HWND mHwnd;
 		HDC mHdc;
 
@@ -27,7 +30,8 @@ namespace EX
 
 		UINT mWidth;
 		UINT mHeight;
-		GameObject mPlayer;
+		//std::vector<Scene*> mScenes;
+		std::vector<GameObject*> mGameObjects;
 	};
 }
 
