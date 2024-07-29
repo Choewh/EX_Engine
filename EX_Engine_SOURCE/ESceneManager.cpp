@@ -1,19 +1,28 @@
 #include "ESceneManager.h"
 
-void EX::SceneManager::Initialize()
-{
+namespace EX {
 
-}
+	std::map<std::wstring, Scene*> SceneManager::mScene = {};
+	Scene* SceneManager::mActiveScene = nullptr;
 
-void EX::SceneManager::Update()
-{
-	mActiveScene->Update();
-}
 
-void EX::SceneManager::LateUpdate()
-{
-}
+	void SceneManager::Initialize()
+	{
 
-void EX::SceneManager::Render(HDC hdc)
-{
+	}
+
+	void SceneManager::Update()
+	{
+		mActiveScene->Update();
+	}
+
+	void SceneManager::LateUpdate()
+	{
+		mActiveScene->LateUpdate();
+	}
+
+	void SceneManager::Render(HDC hdc)
+	{
+		mActiveScene->Render(hdc);
+	}
 }

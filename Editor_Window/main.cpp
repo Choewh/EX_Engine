@@ -12,6 +12,7 @@
 #include "Editor_Window.h"
 
 #include "..\\EX_Engine_SOURCE\\EApplication.h"
+#include "..\\EX_Engine_Window\\ELoadScenes.h"
 
 EX::Application application;
 
@@ -155,7 +156,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
-
+   EX::LoadScenes();
    return TRUE;
 }
 

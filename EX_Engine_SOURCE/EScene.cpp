@@ -29,4 +29,8 @@ namespace EX {
 			mGameObject->Render(hdc);
 		}
 	}
+	void Scene::AddGameObject(GameObject* gameobj)
+	{
+		mGameObjects.push_back(gameobj);
+	}
 }
