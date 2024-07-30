@@ -10,8 +10,12 @@
       <Filter>Scenes</Filter>
     </ClInclude>
     <ClInclude Include="EPlayScene.h" />
+    <ClInclude Include="EPlayer.h" />
+    <ClInclude Include="ETitleScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EPlayScene.cpp" />
+    <ClCompile Include="EPlayer.cpp" />
+    <ClCompile Include="ETitleScene.cpp" />
   </ItemGroup>
 </Project>

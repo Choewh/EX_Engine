@@ -24,12 +24,12 @@ namespace EX {
 		creatBuffer(width, height);
 		InitailizeEtc();
 
-		for (size_t i = 0; i < 50; i++)
-		{
-			GameObject* gameObj = new GameObject();
-			gameObj->SetPosition(rand() % 1600, rand() % 900);
-			mGameObjects.push_back(gameObj);
-		}
+		//for (size_t i = 0; i < 50; i++)
+		//{
+		//	GameObject* gameObj = new GameObject();
+		//	gameObj->SetPosition(rand() % 1600, rand() % 900);
+		//	mGameObjects.push_back(gameObj);
+		//}
 
 
 	}

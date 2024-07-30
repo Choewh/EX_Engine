@@ -18,22 +18,34 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)EApplication.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EBoard.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EBoardMaker.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)EComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)EMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)EResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)EResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)ESceneManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ESpriteRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)ETime.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ETransform.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)EApplication.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EBoard.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EBoardMaker.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)EComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)EMath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)EResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)EResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)ESceneManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ESpriteRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)ETime.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ETransform.cpp" />
   </ItemGroup>
 </Project>

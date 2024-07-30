@@ -33,4 +33,13 @@ namespace EX {
 	{
 		mGameObjects.push_back(gameobj);
 	}
+
+	void Scene::OnEnter()
+	{
+
+	}
+	void Scene::OnExit()
+	{
+
+	}
 }
