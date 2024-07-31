@@ -15,6 +15,7 @@ namespace EX {
 	}
 	void Component::LateUpdate()
 	{
+
 	}
 	void Component::Render(HDC hdc)
 	{

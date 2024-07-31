@@ -2,36 +2,61 @@
 
 namespace EX {
 	Scene::Scene()
-		: mGameObjects{}
+		: mLayers{}
 	{
+		mLayers.resize((UINT)eLayerType::Max);
+		for (size_t i = 0; i < (UINT)eLayerType::Max; i++)
+		{
+			mLayers[i] = new Layer();
+		}
 	}
 	Scene::~Scene()
 	{
 	}
 	void Scene::Initialize()
 	{
+		for (Layer* layer : mLayers)
+		{
+			if (layer == nullptr)
+				continue;
 
+			layer->Initialize();
+		}
 	}
 	void Scene::Update()
 	{
-		for (GameObject* mGameObject : mGameObjects)
+		for (Layer* layer : mLayers)
 		{
-			mGameObject->Update();
+			if (layer == nullptr)
+				continue;
+
+			layer->Update();
 		}
 	}
 	void Scene::LateUpdate()
 	{
+		for (Layer* layer : mLayers)
+		{
+			if (layer == nullptr)
+				continue;
+
+			layer->LateUpdate();
+		}
 	}
 	void Scene::Render(HDC hdc)
 	{
-		for (GameObject* mGameObject : mGameObjects)
+		for (Layer* layer : mLayers)
 		{
-			mGameObject->Render(hdc);
+			if (layer == nullptr)
+				continue;
+
+			layer->Render(hdc);
 		}
 	}
-	void Scene::AddGameObject(GameObject* gameobj)
+
+	void Scene::AddGameObject(GameObject* gameobj, const eLayerType type)
 	{
-		mGameObjects.push_back(gameobj);
+		mLayers[(UINT)type]->AddGameObject(gameobj);
 	}
 
 	void Scene::OnEnter()

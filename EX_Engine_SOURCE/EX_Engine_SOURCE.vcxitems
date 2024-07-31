@@ -20,8 +20,10 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)EBoardMaker.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EEntity.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)EEnums.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ELayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EResources.h" />
@@ -39,6 +41,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)EEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ELayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EMath.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EResources.cpp" />

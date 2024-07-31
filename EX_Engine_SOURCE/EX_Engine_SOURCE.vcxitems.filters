@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)EApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)EResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)EResources.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)EInput.cpp">
+      <Filter>Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ETime.cpp">
+      <Filter>Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)EComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ESpriteRenderer.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ETransform.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)EBoard.cpp">
+      <Filter>ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)EBoardMaker.cpp">
+      <Filter>ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ESceneManager.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)EScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)EGameObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ELayer.cpp">
+      <Filter>Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)EMath.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)EEntity.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)EResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)EResources.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)EInput.h">
+      <Filter>Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ETime.h">
+      <Filter>Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ESpriteRenderer.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ETransform.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EBoard.h">
+      <Filter>ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EBoardMaker.h">
+      <Filter>ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ESceneManager.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EGameObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ELayer.h">
+      <Filter>Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EMath.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EEntity.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EEnums.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Helper">
+      <UniqueIdentifier>{9614be36-01bb-4106-89be-df4dad8db209}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{6d6e3bbb-ee1d-4c18-9447-b99ce2bf060d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ETC">
+      <UniqueIdentifier>{f6764da2-1e42-446a-8626-4f2149353b00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{56979b8a-4fb5-4143-b0fe-4feec557bf32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer">
+      <UniqueIdentifier>{531b9714-731c-4200-b3fb-da8586069503}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{23033d26-ad1e-4b86-8588-c375e6e2f29b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{2597e77a-b459-4eeb-854d-30e3b5c32155}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

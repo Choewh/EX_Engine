@@ -22,7 +22,7 @@ namespace EX {
 
 		//	AddGameObject(obj);
 		//}
-		Player* bg = new Player();
+		bg = new Player();
 		Transform* tr
 			= bg->AddComponent<Transform>();
 		tr->SetPos(Vector2(0, 0));
@@ -34,7 +34,7 @@ namespace EX {
 		sr->SetName(L"SR");
 		sr->ImageLoad(L"D:\\_KDT3D\\Resources\\background.png");
 
-		AddGameObject(bg);
+		AddGameObject(bg,eLayerType::Background);
 	}
 	void PlayScene::Update()
 	{
@@ -54,5 +54,14 @@ namespace EX {
 		Scene::Render(hdc);
 		wchar_t str[50] = L"Play Scene";
 		TextOut(hdc, 0, 0, str, 10);
+	}
+	void PlayScene::OnEnter()
+	{
+	}
+	void PlayScene::OnExit()
+	{
+		Transform* tr
+			= bg->GetComponent<Transform>();
+		tr->SetPos(Vector2(0, 0));
 	}
 }
