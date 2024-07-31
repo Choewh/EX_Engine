@@ -6,7 +6,8 @@
 #include "EInput.h"
 #include "ETitleScene.h"
 #include "ESceneManager.h"
-
+#include "EObject.h"
+#include "ETexture.h"
 namespace EX {
 	PlayScene::PlayScene()
 	{
@@ -16,25 +17,13 @@ namespace EX {
 	}
 	void PlayScene::Initialize()
 	{
-		//for (int i = 0; i < 10; i++) {
-		//	GameObject* obj = new GameObject();
-		//	obj->SetPosition(rand() % 1600, rand() % 900);
-
-		//	AddGameObject(obj);
-		//}
-		bg = new Player();
-		Transform* tr
-			= bg->AddComponent<Transform>();
-		tr->SetPos(Vector2(0, 0));
-
-		tr->SetName(L"TR");
-
-		SpriteRenderer* sr
-			= bg->AddComponent<SpriteRenderer>();
-		sr->SetName(L"SR");
-		sr->ImageLoad(L"D:\\_KDT3D\\Resources\\background.png");
-
-		AddGameObject(bg,eLayerType::Background);
+		{
+			bg = object::Instantiate<Player>(enums::eLayerType::Background, Vector2(100, 100));
+			SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
+			graphics::Texture* tex = new graphics::Texture();
+			tex->Load(L"D:\\_KDT3D\\Resources\\background.png");
+			// sr->ImageLoad(L"D:\\_KDT3D\\Resources\\background.png");
+		}
 	}
 	void PlayScene::Update()
 	{
@@ -60,8 +49,8 @@ namespace EX {
 	}
 	void PlayScene::OnExit()
 	{
-		Transform* tr
-			= bg->GetComponent<Transform>();
-		tr->SetPos(Vector2(0, 0));
+		//Transform* tr
+		//	= bg->GetComponent<Transform>();
+		//tr->SetPos(Vector2(0, 0));
 	}
 }

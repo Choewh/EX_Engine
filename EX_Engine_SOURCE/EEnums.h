@@ -1,6 +1,6 @@
 #pragma once
 
-namespace EX {
+namespace EX::enums {
 
 	enum class eLayerType
 	{
@@ -9,4 +9,12 @@ namespace EX {
 		Player,
 		Max = 16
 	 };
+
+	enum class eResourceType
+	{
+		Texture,
+		AudioClip,
+		Prefab,
+		End,
+	};
 }

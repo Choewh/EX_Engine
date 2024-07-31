@@ -17,6 +17,7 @@ namespace EX
 		void LateUpdate();
 		void Render();
 
+		HDC GetHdc() { return mHdc; }
 
 	private:
 		void adjustWindowRect(HWND Hwnd, UINT width, UINT height);

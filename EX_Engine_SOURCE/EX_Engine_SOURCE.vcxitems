@@ -25,11 +25,13 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)EInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)ELayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)EObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)ESceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)ESpriteRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ETexture.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)ETime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)ETransform.h" />
   </ItemGroup>
@@ -48,6 +50,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)EScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)ESceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)ESpriteRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ETexture.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)ETime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)ETransform.cpp" />
   </ItemGroup>

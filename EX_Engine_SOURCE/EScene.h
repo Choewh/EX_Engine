@@ -20,7 +20,8 @@ namespace EX {
 		virtual void OnEnter(); //씬 입장
 		virtual void OnExit();  //씬 퇴장
 
-		void AddGameObject(GameObject* gameobj, const eLayerType type);
+		void AddGameObject(GameObject* gameobj, const enums::eLayerType type);
+		Layer* GetLayer(const enums::eLayerType Type) { return mLayers[(UINT)Type]; }
 
 	private:
 		std::vector<Layer*> mLayers;

@@ -1,11 +1,13 @@
 #include "EGameObject.h"
 #include "EInput.h"
 #include "ETime.h"
+#include "ETransform.h"
+
 namespace EX 
 {
 	GameObject::GameObject()
 	{
-		
+		InitializeTransform();
 	}
 	GameObject::~GameObject() 
 	{
@@ -44,5 +46,9 @@ namespace EX
 		}
 	}
 
+	void GameObject::InitializeTransform()
+	{
+		AddComponent<Transform>();
+	}
 
 }

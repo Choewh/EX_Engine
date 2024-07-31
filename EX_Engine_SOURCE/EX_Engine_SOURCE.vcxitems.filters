@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)EApplication.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)EResource.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)EResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EInput.cpp">
       <Filter>Helper</Filter>
     </ClCompile>
@@ -43,11 +41,18 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)EEntity.cpp">
       <Filter>Common</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)EResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)EResources.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ETexture.cpp">
+      <Filter>Resource\Texture</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)EApplication.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)EResource.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)EResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EInput.h">
       <Filter>Helper</Filter>
     </ClInclude>
@@ -93,6 +98,18 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)EEnums.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EObject.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EResource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EResources.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ETexture.h">
+      <Filter>Resource\Texture</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Helper">
@@ -115,6 +132,12 @@
     </Filter>
     <Filter Include="Scene">
       <UniqueIdentifier>{2597e77a-b459-4eeb-854d-30e3b5c32155}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{36ae4b8b-dee8-40ae-b1fa-7f78e9403d54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Texture">
+      <UniqueIdentifier>{ae86a18c-8dcb-47b2-aac4-6ab8d7dc7675}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
