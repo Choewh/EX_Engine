@@ -5,6 +5,8 @@
 
 namespace EX 
 {
+
+
 	void LoadScenes()
 	{
 		SceneManager::CreateScene<TitleScene>(L"TitleScene");

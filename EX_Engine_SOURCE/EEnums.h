@@ -17,4 +17,12 @@ namespace EX::enums {
 		Prefab,
 		End,
 	};
+
+	enum class eComponentType
+	{
+		Transform,
+		SpriteRenderer,
+		Script,
+		End,
+	};
 }

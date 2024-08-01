@@ -4,18 +4,43 @@
     <Filter Include="Scenes">
       <UniqueIdentifier>{7c623cbb-e1ca-4cf8-a9f3-df179f16fd28}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Content">
+      <UniqueIdentifier>{80446e91-cf93-4179-ade6-23ee2b7a2ce8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script">
+      <UniqueIdentifier>{5ef48854-b833-44d0-9d1c-bad102192bba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ELoadScenes.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="EPlayScene.h" />
-    <ClInclude Include="EPlayer.h" />
-    <ClInclude Include="ETitleScene.h" />
+    <ClInclude Include="ELoadResources.h" />
+    <ClInclude Include="EPlayScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="ETitleScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="EPlayer.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="EPlayerScript.h">
+      <Filter>Script</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EPlayScene.cpp" />
-    <ClCompile Include="EPlayer.cpp" />
-    <ClCompile Include="ETitleScene.cpp" />
+    <ClCompile Include="EPlayScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="ETitleScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="EPlayer.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="EPlayerScript.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

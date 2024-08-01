@@ -13,6 +13,7 @@
 
 #include "..\\EX_Engine_SOURCE\\EApplication.h"
 #include "..\\EX_Engine_Window\\ELoadScenes.h"
+#include "..\\EX_Engine_Window\\ELoadResources.h"
 
 EX::Application application;
 
@@ -161,6 +162,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
    Gdiplus::GdiplusStartup(&gpToken, &gpsi, NULL);
+
+   EX::LoadResources();
    EX::LoadScenes();
    return TRUE;
 }

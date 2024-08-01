@@ -8,6 +8,9 @@
 #include "ESceneManager.h"
 #include "EObject.h"
 #include "ETexture.h"
+#include "EResources.h"
+#include "EPlayerScript.h"
+
 namespace EX {
 	PlayScene::PlayScene()
 	{
@@ -17,13 +20,16 @@ namespace EX {
 	}
 	void PlayScene::Initialize()
 	{
-		{
-			bg = object::Instantiate<Player>(enums::eLayerType::Background, Vector2(100, 100));
+		//{
+			bg = object::Instantiate<Player>(enums::eLayerType::Background, Vector2(0, 0));
 			SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
-			graphics::Texture* tex = new graphics::Texture();
-			tex->Load(L"D:\\_KDT3D\\Resources\\background.png");
-			// sr->ImageLoad(L"D:\\_KDT3D\\Resources\\background.png");
-		}
+			graphics::Texture* text = (Resources::Find<graphics::Texture>(L"BG"));
+			sr->SetTexture(text);
+			PlayerScript* ps = bg->AddComponent<PlayerScript>();
+		//	graphics::Texture* tex = new graphics::Texture();
+		//	tex->Load(L"D:\\_KDT3D\\Resources\\background.png");
+		//	// sr->ImageLoad(L"D:\\_KDT3D\\Resources\\background.png");
+		//}
 	}
 	void PlayScene::Update()
 	{

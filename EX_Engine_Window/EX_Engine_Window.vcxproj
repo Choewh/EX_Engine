@@ -132,13 +132,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="EPlayerScript.h" />
     <ClInclude Include="ELoadScenes.h" />
     <ClInclude Include="EPlayer.h" />
     <ClInclude Include="EPlayScene.h" />
     <ClInclude Include="ETitleScene.h" />
+    <ClInclude Include="ELoadResources.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EPlayer.cpp" />
+    <ClCompile Include="EPlayerScript.cpp" />
     <ClCompile Include="EPlayScene.cpp" />
     <ClCompile Include="ETitleScene.cpp" />
   </ItemGroup>

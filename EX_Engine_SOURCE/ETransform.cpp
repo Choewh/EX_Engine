@@ -1,6 +1,7 @@
 #include "ETransform.h"
 namespace EX {
 	Transform::Transform()
+		:Component(enums::eComponentType::Transform)
 	{
 	}
 	Transform::~Transform()

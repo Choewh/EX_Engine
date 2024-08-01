@@ -7,6 +7,7 @@ namespace EX
 {
 	GameObject::GameObject()
 	{
+		mComponents.resize((UINT)enums::eComponentType::End);
 		InitializeTransform();
 	}
 	GameObject::~GameObject() 
@@ -18,6 +19,9 @@ namespace EX
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+				continue;
+
 			comp->Initialize();
 		}
 	}
@@ -26,6 +30,9 @@ namespace EX
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+				continue;
+
 			comp->Update();
 		}
 	}
@@ -34,6 +41,9 @@ namespace EX
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+				continue;
+
 			comp->LateUpdate();
 		}
 	}
@@ -42,6 +52,9 @@ namespace EX
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+				continue;
+
 			comp->Render(mHdc);
 		}
 	}
