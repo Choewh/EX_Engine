@@ -7,8 +7,9 @@ namespace EX
 	{
 		'Z','X','C',
 			'W',			   VK_UP,
-		'A','S','D',  VK_LEFT,VK_DOWN,VK_RIGHT,
+		'A','S','D','N',  VK_LEFT,VK_DOWN,VK_RIGHT,
 		' ',
+		
 	};
 
 	void Input::Initailize()

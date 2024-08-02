@@ -3,6 +3,7 @@
 #include "EComponent.h"
 
 namespace EX {
+
 	class GameObject
 	{
 	public:
@@ -18,7 +19,6 @@ namespace EX {
 		T* AddComponent()
 		{
 			T* comp = new T();
-			comp->Initialize();
 			comp->SetOwner(this);
 			mComponents[(UINT)comp->GetType()] = comp;
 			return comp;

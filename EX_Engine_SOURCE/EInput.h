@@ -13,8 +13,8 @@ namespace EX {
 	enum class eKeyCode : unsigned char
 	{
 		Z,X,C,
-		  W,		  Up,
-		A,S,D,	Left,Down,Right,
+		  W,			 Up,
+		A,S,D,N,	Left,Down,Right,
 		Space,
 		End, //끝
 	};

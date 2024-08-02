@@ -10,12 +10,14 @@
     <Filter Include="Script">
       <UniqueIdentifier>{5ef48854-b833-44d0-9d1c-bad102192bba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{dee415cc-0a63-4ff2-aeaf-0600130123de}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ELoadScenes.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="ELoadResources.h" />
     <ClInclude Include="EPlayScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
@@ -27,6 +29,9 @@
     </ClInclude>
     <ClInclude Include="EPlayerScript.h">
       <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="ELoadResources.h">
+      <Filter>Resources</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,21 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)EApplication.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EInput.cpp">
       <Filter>Helper</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)ETime.cpp">
       <Filter>Helper</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)EComponent.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)ESpriteRenderer.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)ETransform.cpp">
-      <Filter>Component</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)EBoard.cpp">
       <Filter>ETC</Filter>
@@ -24,9 +14,6 @@
       <Filter>ETC</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)ESceneManager.cpp">
-      <Filter>Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)EScene.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)EGameObject.cpp">
@@ -41,35 +28,44 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)EEntity.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)EResource.cpp">
-      <Filter>Resource</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)EResources.cpp">
-      <Filter>Resource</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)ETexture.cpp">
       <Filter>Resource\Texture</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)EScript.cpp">
-      <Filter>Component</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)EComponent.cpp">
+      <Filter>Component\Base</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)EScript.cpp">
+      <Filter>Component\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ESpriteRenderer.cpp">
+      <Filter>Component\SpriteRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ETransform.cpp">
+      <Filter>Component\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ECamera.cpp">
+      <Filter>Component\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)EApplication.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)EResource.cpp">
+      <Filter>Resource\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)EResources.cpp">
+      <Filter>Resource\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)EScene.cpp">
+      <Filter>Scene\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ERenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)EApplication.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EInput.h">
       <Filter>Helper</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)ETime.h">
       <Filter>Helper</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)EComponent.h">
-      <Filter>Component</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)ESpriteRenderer.h">
-      <Filter>Component</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)ETransform.h">
-      <Filter>Component</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)EBoard.h">
       <Filter>ETC</Filter>
@@ -78,9 +74,6 @@
       <Filter>ETC</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)ESceneManager.h">
-      <Filter>Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)EScene.h">
       <Filter>Scene</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)EGameObject.h">
@@ -104,18 +97,37 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)EObject.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)EResource.h">
-      <Filter>Resource</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)EResources.h">
-      <Filter>Resource</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)ETexture.h">
       <Filter>Resource\Texture</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)EScript.h">
-      <Filter>Component</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EComponent.h">
+      <Filter>Component\Base</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EScript.h">
+      <Filter>Component\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ESpriteRenderer.h">
+      <Filter>Component\SpriteRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ETransform.h">
+      <Filter>Component\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ECamera.h">
+      <Filter>Component\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EApplication.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EResource.h">
+      <Filter>Resource\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EResources.h">
+      <Filter>Resource\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EScene.h">
+      <Filter>Scene\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ERenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Helper">
@@ -144,6 +156,33 @@
     </Filter>
     <Filter Include="Resource\Texture">
       <UniqueIdentifier>{ae86a18c-8dcb-47b2-aac4-6ab8d7dc7675}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Base">
+      <UniqueIdentifier>{2b90f2ac-9211-4fec-a416-77c374ec6a05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Script">
+      <UniqueIdentifier>{f8cef8da-5953-40fe-8387-eb5c1823d35b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\SpriteRenderer">
+      <UniqueIdentifier>{07e76031-3d24-4241-acb2-6e0154d6811f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Transform">
+      <UniqueIdentifier>{49567e0c-7ac3-4639-ba87-7a738d313794}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Camera">
+      <UniqueIdentifier>{3cffb459-b651-46a0-9d01-2cc783405086}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{48aae52d-0b76-45f0-af59-d5467082f7d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Base">
+      <UniqueIdentifier>{a7000b2b-9b31-4b17-b17a-02d8f0539955}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Base">
+      <UniqueIdentifier>{29bdd45b-b34a-40d9-8661-4a1ce0861ddb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{c3f8aa8c-f9e0-4e3e-9e2a-c361ea8efc63}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -3,6 +3,7 @@
 
 namespace EX {
 
+	class Transform;
 	class PlayerScript : public Script
 	{
 	public:
@@ -15,7 +16,8 @@ namespace EX {
 		void Render(HDC hdc) override;
 	private:
 
-
+		Transform* tr;
+		math::Vector2 pos;
 	};
 
 }

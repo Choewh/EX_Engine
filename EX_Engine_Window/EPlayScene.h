@@ -17,7 +17,7 @@ namespace EX {
 
 
 	private:
-		class Player* bg;
+		class Player* mPlayer;
 	};
 }
 

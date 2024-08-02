@@ -18,6 +18,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)EApplication.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EBoard.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EBoardMaker.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ECamera.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EEnums.h" />
@@ -26,6 +27,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)ELayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ERenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EScene.h" />
@@ -40,12 +42,14 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)EApplication.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EBoard.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EBoardMaker.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ECamera.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)ELayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EMath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ERenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)EScene.cpp" />

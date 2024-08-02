@@ -3,6 +3,8 @@
 #include "ETransform.h"
 #include "ETexture.h"
 #include "EMath.h"
+#include "ERenderer.h"
+#include "ECamera.h"
 
 namespace EX {
 	SpriteRenderer::SpriteRenderer()
@@ -30,6 +32,7 @@ namespace EX {
 
 		Transform* tr = GetOwner()->GetComponent<Transform>();		
 		Vector2 pos = tr->GetPosition();
+		pos = renderer::mainCamera->CaluatePosition(pos);
 
 		if (mTexture->GetTextureType() == graphics::Texture::eTextureType::Bmp)
 		{

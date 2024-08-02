@@ -7,6 +7,8 @@
 namespace EX {
 	PlayerScript::PlayerScript()
 		:Script()
+		, tr(nullptr)
+		, pos(Vector2::Zero)
 	{
 	}
 
@@ -16,24 +18,30 @@ namespace EX {
 
 	void PlayerScript::Initialize()
 	{
+		tr = GetOwner()->GetComponent<Transform>();
+		pos = tr->GetPosition();
 	}
 
 	void PlayerScript::Update()
 	{
 		if (Input::GetKey(eKeyCode::Right))
 		{
-			//현재 컴포넌트를 가지고있는 게임 오브젝트 - > Getcomp -> tr 반환
-			Transform* tr = GetOwner()->GetComponent<Transform>();
-			Vector2 pos = tr->GetPosition();
 			pos.x += 100.0f * Time::DeltaTime();
 			tr->SetPos(pos);
 		}
 		if (Input::GetKey(eKeyCode::Left))
 		{
-			//현재 컴포넌트를 가지고있는 게임 오브젝트 - > Getcomp -> tr 반환
-			Transform* tr = GetOwner()->GetComponent<Transform>();
-			Vector2 pos = tr->GetPosition();
 			pos.x -= 100.0f * Time::DeltaTime();
+			tr->SetPos(pos);
+		}
+		if (Input::GetKey(eKeyCode::Up))
+		{
+			pos.y -= 100.0f * Time::DeltaTime();
+			tr->SetPos(pos);
+		}
+		if (Input::GetKey(eKeyCode::Down))
+		{
+			pos.y += 100.0f * Time::DeltaTime();
 			tr->SetPos(pos);
 		}
 	}
@@ -44,6 +52,14 @@ namespace EX {
 
 	void PlayerScript::Render(HDC hdc)
 	{
+		int intX = static_cast<int>(pos.x);
+		int intY = static_cast<int>(pos.y);
+		std::wstring x = std::to_wstring(intX);
+		std::wstring y = std::to_wstring(intY);
+		x += ':';
+		x += y;
+		const wchar_t* x1 = x.c_str();
+		TextOut(hdc, 0, 40, x1, 10);
 	}
 
 }

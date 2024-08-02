@@ -7,6 +7,7 @@ namespace EX::enums {
 		None,
 		Background,
 		Player,
+
 		Max = 16
 	 };
 
@@ -23,6 +24,7 @@ namespace EX::enums {
 		Transform,
 		SpriteRenderer,
 		Script,
+		Camera,
 		End,
 	};
 }
