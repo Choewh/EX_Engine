@@ -27,6 +27,11 @@ namespace EX::graphics
 			mBitmap = (HBITMAP)LoadImageW(nullptr, path.c_str(), IMAGE_BITMAP,
 				0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
 
+			if (mBitmap == NULL) {
+				DWORD dwError = GetLastError();
+				wprintf(L"Failed to load image. Error code: %lu\n", dwError);
+			}
+
 			if (mBitmap == nullptr)
 				return S_FALSE;
 

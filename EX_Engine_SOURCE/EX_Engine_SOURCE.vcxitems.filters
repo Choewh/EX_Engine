@@ -59,6 +59,8 @@
       <Filter>Scene\Base</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)ERenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)EAnimator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)EAnimation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)EInput.h">
@@ -128,6 +130,8 @@
       <Filter>Scene\Base</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)ERenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)EAnimator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)EAnimation.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Helper">

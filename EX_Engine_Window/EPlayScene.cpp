@@ -12,6 +12,7 @@
 #include "EPlayerScript.h"
 #include "ECamera.h"
 #include "ERenderer.h"
+#include "EAnimator.h"
 
 namespace EX {
 	PlayScene::PlayScene()
@@ -30,9 +31,16 @@ namespace EX {
 			renderer::mainCamera = cameracomp;
 
 			mPlayer = object::Instantiate<Player>(enums::eLayerType::Player,Vector2(800,450));
-			SpriteRenderer* sr = mPlayer->AddComponent<SpriteRenderer>();
-			graphics::Texture* text = (Resources::Find<graphics::Texture>(L"PacMan0"));
-			sr->SetTexture(text);
+			//SpriteRenderer* sr = mPlayer->AddComponent<SpriteRenderer>();
+
+			graphics::Texture* Texture = (Resources::Find<graphics::Texture>(L"test"));
+			Animator* animator = mPlayer->AddComponent<Animator>();
+			animator->CreateAnimation(L"CatFrontMove", Texture
+				,Vector2::Zero, Vector2(51.0f, 51.0f), Vector2::Zero, 5, 0.1f);
+
+			animator->PlayAnimation(L"CatFrontMove");
+
+			//sr->SetTexture(text);
 			mPlayer->AddComponent<PlayerScript>();
 			cameracomp->SetTarget(mPlayer);
 			mPlayer->Initialize();

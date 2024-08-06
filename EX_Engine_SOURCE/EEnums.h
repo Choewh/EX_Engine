@@ -15,6 +15,7 @@ namespace EX::enums {
 	{
 		Texture,
 		AudioClip,
+		Animation,
 		Prefab,
 		End,
 	};
@@ -23,6 +24,7 @@ namespace EX::enums {
 	{
 		Transform,
 		SpriteRenderer,
+		Animator,
 		Script,
 		Camera,
 		End,
